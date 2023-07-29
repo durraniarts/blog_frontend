@@ -1,0 +1,548 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  --font-ubuntu: "Ubuntu", sans-serif;
+  --font-Overpass: "Overpass", sans-serif;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  padding: 4rem 0rem;
+}
+a {
+  font-family: var(--font-ubuntu);
+  text-decoration: none;
+  color: black;
+}
+nav {
+  display: flex;
+  /* margin-left: 11rem; */
+  transition: all 0.3s;
+}
+button {
+  cursor: pointer;
+  font-family: var(--font-ubuntu);
+}
+
+.nav-logo {
+  font-family: var(--font-Overpass);
+  font-size: 2.5rem;
+  font-weight: bold;
+  /* position: absolute; */
+  color: white;
+}
+
+.drop-down {
+  display: none;
+  position: absolute;
+  width: 8rem;
+  z-index: 0;
+  background-color: aliceblue;
+  list-style: none;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0 0 -0.5rem;
+  box-shadow: 1px 1px 10px rgb(124, 124, 124);
+}
+.drop-down > li > a {
+  cursor: pointer;
+  font-family: var(--font-Overpass);
+  line-height: 2rem;
+  font-size: 0.9em;
+}
+
+.navbar-main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  max-width: 1900px;
+  width: 80%;
+  z-index: 1;
+}
+.toggle-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.first-link > a,
+.second-link > a {
+  margin-right: 2rem;
+}
+
+.first-link > a,
+.second-link > a,
+.third-link > a {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.first-link > a > img,
+.second-link > a > img,
+.third-link > a > img {
+  margin-left: 0.3rem;
+  transition: 0.4s;
+  padding: 0.05rem 0.5rem;
+  /* margin-top: 1rem; */
+  margin-bottom: 0rem;
+}
+/* .first-link > a:hover > img,
+.second-link > a:hover > img,
+.third-link > a:hover > img {
+  transform: rotate(-180deg);
+} */
+
+.login-section > button:last-child {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: hsl(353, 100%, 62%);
+  padding: 0.6rem 2.2rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  margin-left: 1.5rem;
+  font-family: var(--font-ubuntu);
+  font-weight: 500;
+  transition: all 0.4s;
+}
+.login-section {
+  /* justify-self: end; */
+}
+
+.login-section > button:first-child {
+  border: none;
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-family: var(--font-ubuntu);
+  color: white;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+.login-section > button:first-child:hover {
+  margin-right: -16px;
+  border: 1px solid white;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: hsl(2, 100%, 67%);
+  box-shadow: 1px 1px 10px white;
+}
+.login-section > button:last-child:hover {
+  background-color: hsl(353, 100%, 62%);
+  color: white;
+  box-shadow: 1px 1px 25px hsl(13, 100%, 72%);
+}
+
+.head-section-home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+  margin: auto;
+  height: 36rem;
+  background-image: url(./images/bg-pattern-intro-desktop.svg);
+  background-size: 230%;
+  background-position: 26% 51.5%;
+  color: white;
+  border-bottom-left-radius: 8rem;
+}
+
+.head-section-home::before {
+  background-image: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  width: 100%;
+  height: 36rem;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  border-bottom-left-radius: 8rem;
+}
+
+.head-section-home > h1 {
+  font-size: 3.4rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.head-section-home > p {
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.head-btns > button {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: hsl(353, 100%, 62%);
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  font-family: var(--font-ubuntu);
+}
+.head-btns > button:first-child {
+  margin-right: 0.8rem;
+  padding: 0.6rem 1rem;
+  transition: 0.3s;
+}
+
+.head-btns > button:last-child {
+  border: 1px solid white;
+  color: white;
+  background-color: hsl(2, 100%, 67%);
+  transition: 0.3s;
+}
+
+.head-btns > button:first-child:hover {
+  background-color: hsl(353, 100%, 69%);
+  color: white;
+  box-shadow: 1px 1px 25px hsl(4, 68%, 47%);
+}
+.head-btns > button:last-child:hover {
+  background-color: white;
+  color: hsl(353, 100%, 62%);
+}
+
+.section-2 {
+  height: fit-content;
+  width: 100%;
+  max-width: 1900px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.section-2-content {
+  width: 80%;
+  height: fit-content;
+  padding: 10rem 0 3rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.section-2-heading {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 2em;
+  color: hsl(208, 49%, 24%);
+  font-family: var(--font-Overpass);
+}
+
+.section-2-article {
+  padding: 5rem 0 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 1.2rem;
+}
+.section-2-article > h3 {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: hsl(208, 49%, 24%);
+  font-family: var(--font-Overpass);
+}
+.section-2-article > p {
+  color: hsl(208, 49%, 24%);
+  line-height: 1.9rem;
+  font-weight: 300;
+  font-size: 1.1em;
+}
+.section-2-article > p {
+  margin-bottom: 1rem;
+  padding-right: 5rem;
+}
+
+.section-2-img > img {
+  width: 150%;
+  /* min-width: 150%;
+  max-width: 100%; */
+}
+
+.section-3 {
+  width: 100%;
+  background-image: url(./images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: -20% 90%;
+  background-color: hsl(237, 17%, 21%);
+  border-bottom-left-radius: 7rem;
+  border-top-right-radius: 7rem;
+}
+.section-3-article {
+  display: flex;
+  height: 28rem;
+
+  justify-content: space-around;
+  margin: auto;
+  align-items: center;
+  color: white;
+  width: 80%;
+  max-width: 1900px;
+}
+
+.section-3-article > img {
+  min-width: 50%;
+  max-width: 100%;
+  margin-left: -4%;
+  position: relative;
+  top: 1rem;
+}
+.section-3-article-content {
+  width: 40rem;
+}
+.section-3-article-content > p {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 1em;
+}
+.section-3-article-content > h3 {
+  font-size: 1.8em;
+  font-weight: 500;
+}
+.section-4 {
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  max-width: 1900px;
+  padding-bottom: 3rem;
+}
+
+.section-4-article {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 6rem;
+}
+.section-4-article > img {
+  max-width: 100%;
+  min-width: 80%;
+  margin-left: -35%;
+  position: relative;
+  top: 1rem;
+}
+.section-4-content > h3 {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: hsl(208, 49%, 24%);
+  font-family: var(--font-Overpass);
+}
+.section-4-content > p {
+  font-size: 1.1em;
+  margin-top: 1.8rem;
+  line-height: 1.5em;
+  font-weight: 300;
+  font-family: var(--font-Overpass);
+  color: hsl(208, 49%, 24%);
+}
+.section-4-content > .first-text {
+  margin-bottom: 3rem;
+}
+
+footer {
+  width: 100%;
+  background-color: hsl(240, 10%, 16%);
+  border-top-right-radius: 8rem;
+}
+
+.footer-section {
+  width: 80%;
+  color: rgb(255, 255, 255);
+  padding: 6rem 0;
+  margin: auto;
+  height: 22rem;
+}
+.icon {
+  font-family: var(--font-Overpass);
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: absolute;
+
+  color: white;
+}
+
+.links {
+  display: flex;
+  gap: 0 20%;
+  margin-left: 10rem;
+  justify-content: center;
+}
+
+.product > h5,
+.company > h5,
+.connect > h5 {
+  font-family: var(--font-Overpass);
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 2rem;
+}
+
+.product,
+.company,
+.connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.product > a,
+.company > a,
+.connect > a {
+  color: rgb(221, 212, 212);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.product > a:hover,
+.company > a:hover,
+.connect > a:hover {
+  text-decoration: underline;
+}
+.horizontal-rule {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .toggle {
+    display: none;
+  }
+}
+/* @media (min-width: 992px) {
+  .drop-down {
+    display: none;
+  }
+} */
+@media (max-width: 1102px) {
+  .section-2-content {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 80%;
+    text-align: center;
+  }
+  .section-2-article {
+    padding: 0;
+    margin: auto;
+  }
+  .section-2-img {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .first-link > a,
+  .second-link > a,
+  .third-link > a {
+    /* display: none; */
+    margin: 0;
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .login-section {
+    display: none;
+  }
+  .link {
+    display: none;
+  }
+
+  .show > .login-section {
+    display: block;
+  }
+  .show > nav > .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .show > nav > .link > a {
+    color: black;
+  }
+  .show > nav > .link > a > img {
+    /* display: none; */
+    filter: brightness(100) invert(100%);
+  }
+
+  .show > nav > .link > a:hover > img {
+    transform: none;
+  }
+
+  .show > nav > .link > .drop-down {
+    /* display: block; */
+    z-index: 5;
+    position: relative;
+    margin: 0 0 1rem 0;
+  }
+  .show > .login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .show > .login-section > button:first-child {
+    color: black;
+    font-weight: 600;
+    font-size: 1em;
+  }
+  .show > .login-section > button:first-child:hover {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .show > .login-section > button:last-child {
+    margin: 1rem 0 0 0;
+    font-size: 1em;
+    background-color: hsl(356, 100%, 66%);
+    color: white;
+  }
+  .show > .login-section > button:last-child:hover {
+    box-shadow: none;
+  }
+  .show > .horizontal-rule {
+    display: block;
+    width: 100%;
+    border-top: 1px solid rgb(134, 134, 134);
+    border-bottom: 0;
+    margin-top: 2rem;
+  }
+  .navbar-main-section {
+    /* justify-content: center; */
+  }
+  .show {
+    width: 60%;
+    margin: auto;
+    background-color: rgba(253, 240, 240, 0.95);
+    height: fit-content;
+    box-shadow: 1px 0px 10px rgb(220, 140, 140);
+    position: absolute;
+    top: 7.5rem;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem 1rem 1rem 6rem;
+    padding: 3rem;
+    transition: all 0.5s ease-in-out;
+  }
+}
